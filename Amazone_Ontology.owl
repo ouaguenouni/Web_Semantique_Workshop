@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#"
+     xml:base="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#also_bought -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#also_bought"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#also_view -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#also_view"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#appartientCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#appartientCategory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Article"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#brandOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#brandOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#hasBrand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#contientArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#contientArticle">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#contientArticle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#hasBrand -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#hasBrand">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Article"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Brands"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#SalesRank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#SalesRank"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Article">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#appartientCategory"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Main_Category"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Brands -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Brands"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Main_Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Main_Category">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Category"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Other_Categories"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Other_Categories -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Other_Categories">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mohamed/ontologies/2020/3/Amazone_Ont#Category"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
